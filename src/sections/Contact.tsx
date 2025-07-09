@@ -337,12 +337,12 @@ export default function Contact() {
               For time-sensitive projects or immediate assistance
             </p>
             <a 
-              href="tel:+916303639848"
+              href="tel:+918374330906"
               className="inline-flex items-center gap-2 bg-blue-500 dark:bg-blue-500 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
               aria-label="Call for urgent projects"
             >
               <Phone className="w-4 h-4" />
-              +91 6303639848
+              +91 8374330906
             </a>
           </div>
         </motion.div>

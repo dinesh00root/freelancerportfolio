@@ -6,26 +6,13 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Truck, Leaf, ShoppingCart, ExternalLink, Calendar, Users, Zap, Award, MessageCircle } from 'lucide-react';
 
 const projects = [
+ 
   {
-    title: 'E-Commerce App for Retail Store',
-    icon: <ShoppingCart className="h-6 w-6 text-pink-600" />,
-    tech: ['React Native CLI', 'Redux', 'Firebase', 'Payment Gateway'],
-    desc: 'Full-featured retail shopping app with sleek UI, seamless cart/checkout flow, and secure payment integration. Increased client sales by 35%.',
-    type: 'Client Project',
-    deliveryTime: '7 weeks',
-    
-    testimonial: '"Professional delivery and excellent post-launch support."',
-    client: 'Retail Business',
-    demoUrl: 'https://e-commerce-website-xi-blue.vercel.app/',
-    githubUrl: 'https://github.com/Dinesh-78/E-commerce-website',
-    caseStudyUrl: '#'
-  },
-  {
-    title: 'Courier Management System',
+    title: 'Truck Management System',
     icon: <Truck className="h-6 w-6 text-blue-600" />,
-    tech: ['Spring Boot', 'MySQL', 'Java', 'REST API'],
-    desc: 'Streamlined logistics operations for a delivery company serving 500+ daily customers. Reduced manual processing by 60% and improved delivery tracking accuracy.',
-    type: 'Backend Project',
+    tech: ['React', 'Typescript', 'Tailwind CSS', 'Node.js'],
+    desc: 'Streamlined logistics operations for a delivery company serving 500+ daily customers. Reduced manual processing by 60% and improved delivery tracking accuracy. ',
+    type: 'Frontend Project',
     deliveryTime: '3 weeks',
     metrics: {
       performance: '40% faster processing',
@@ -34,8 +21,22 @@ const projects = [
     },
     testimonial: '"Delivered ahead of schedule with excellent API performance."',
     client: 'Logistics Company',
-    demoUrl: 'https://github.com/Dinesh-78/CourierManagementSystem',
-    githubUrl: 'https://github.com/Dinesh-78/CourierManagementSystem',
+    demoUrl: 'https://fleetmanagementsyetem.vercel.app/',
+    
+    caseStudyUrl: '#'
+  },
+  {
+    title: 'E-Commerce App for Retail Store',
+    icon: <ShoppingCart className="h-6 w-6 text-pink-600" />,
+    tech: ['React Js', 'Redux', 'Firebase', 'Tailwind CSS'],
+    desc: 'Full-featured retail shopping app with sleek UI, seamless cart/checkout flow, and secure payment integration. Increased client sales by 35%.',
+    type: 'Client Project',
+    deliveryTime: '7 weeks',
+    
+    testimonial: '"Professional delivery and excellent post-launch support."',
+    client: 'Retail Business',
+    demoUrl: 'https://e-commerce-website-xi-blue.vercel.app/',
+    githubUrl: 'https://github.com/Dinesh-78/E-commerce-website',
     caseStudyUrl: '#'
   },
   {
@@ -56,6 +57,22 @@ const projects = [
     githubUrl: 'https://github.com/Dinesh-78/Agromart-react-native',
     caseStudyUrl: '#'
   },
+  {
+    title: 'Driver React Native App',
+    icon: <Users className="h-6 w-6 text-green-600" />,
+    tech: ['React Native', 'Express.js', 'MongoDB', 'Real-time'],
+    desc: 'Connected 200+ farmers with consumers through mobile platform. Features include product listing, order management, and community support with real-time tracking.',
+    type: 'Mobile App',
+    deliveryTime: '4 weeks',
+    metrics: {
+      users: '200+ farmers',
+      orders: '500+ processed',
+      rating: '4.8/5 stars'
+    },
+    testimonial: '"Intuitive design and smooth user experience. Highly recommended!"',
+    client: 'Agricultural Startup',
+    demoUrl: 'https://drive.google.com/file/d/15DRWES9buH5xNST5cAvejllGU4TEUE8Z/view?usp=sharing',
+  }
  
 ];
 

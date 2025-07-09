@@ -36,7 +36,7 @@ export default function About() {
               based on custom UI/UX and seamless functionality.
             </p>
             <p className="text-lg">
-              Currently, I work as a <strong>Next.js Frontend Developer</strong> at <strong>MOV37 Productions</strong>, where I craft scalable and high-performing UI systems
+              Currently, I work as a <strong>Next.js Frontend Developer</strong> at <strong>MOVE37 Productions</strong>, where I craft scalable and high-performing UI systems
               using the latest in <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, and component libraries like <strong>shadcn/ui</strong>.
             </p>
             <p className="text-lg">
