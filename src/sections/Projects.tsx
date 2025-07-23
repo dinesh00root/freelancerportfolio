@@ -3,15 +3,47 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Truck, Leaf, ShoppingCart, ExternalLink, Calendar, Users, Zap, Award, MessageCircle } from 'lucide-react';
+import { Truck, Leaf, ShoppingCart, ExternalLink, Calendar, Users, Zap, Award, MessageCircle, Coins } from 'lucide-react';
 
 const projects = [
+  {
+    title: 'Merchant Loyalty App',
+    icon: <Coins  className="h-6 w-6 text-blue-600" />,
+    tech: ['React Native', 'Express.js', 'Postgresql','firebase', 'Typescript', 'Tailwind CSS', 'Node.js'],
+    desc: 'A loyalty app for merchants to manage customer rewards and transactions. Features include real-time transaction tracking, customer management, and analytics dashboard.',
+    type: 'Full Stack Project',
+    deliveryTime: '3 weeks',
+    metrics: {
+      performance: '60% faster processing',
+      
+    },
+    testimonial: '"Features are good need to improve UI"',
+    client: 'Loyalty App Client',
+    demoUrl: 'https://drive.google.com/file/d/14AiDsGd-_MazwMG6KoZR8N5nA8Utw4NV/view?usp=sharing',
+    caseStudyUrl: '#'
+  },
+  {
+    title: 'Customer Loyalty App',
+    icon: <Coins  className="h-6 w-6 text-blue-600" />,
+    tech: ['React Native', 'Express.js', 'Postgresql','firebase', 'Typescript', 'Tailwind CSS', 'Node.js'],
+    desc: 'A loyalty app for merchants to manage customer rewards and transactions. Features include real-time transaction tracking, customer management, and analytics dashboard.',
+    type: 'Full Stack Project',
+    deliveryTime: '3 weeks',
+    metrics: {
+      performance: '60% faster processing',
+      
+    },
+    testimonial: '"Features are good need to improve UI"',
+    client: 'Loyalty App Client',
+    demoUrl: 'https://drive.google.com/file/d/14AiDsGd-_MazwMG6KoZR8N5nA8Utw4NV/view?usp=sharing',
+    caseStudyUrl: '#'
+  },
  
   {
     title: 'Truck Management System',
     icon: <Truck className="h-6 w-6 text-blue-600" />,
     tech: ['React', 'Typescript', 'Tailwind CSS', 'Node.js'],
-    desc: 'Streamlined logistics operations for a delivery company serving 500+ daily customers. Reduced manual processing by 60% and improved delivery tracking accuracy. ',
+    desc: 'Streamlined logistics operations for a delivery company serving 5+ daily customers. Reduced manual processing by 60% and improved delivery tracking accuracy. ',
     type: 'Frontend Project',
     deliveryTime: '3 weeks',
     metrics: {
@@ -73,6 +105,7 @@ const projects = [
     client: 'Agricultural Startup',
     demoUrl: 'https://drive.google.com/file/d/15DRWES9buH5xNST5cAvejllGU4TEUE8Z/view?usp=sharing',
   }
+
  
 ];
 

@@ -65,7 +65,7 @@ export default function About() {
             <li>
               <div className="flex items-center gap-2">
                 <CalendarDays className="text-blue-600 dark:text-blue-400 w-5 h-5" />
-                <h4 className="font-semibold text-gray-900 dark:text-white">MOV37 Productions</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">MOVE37 Productions</h4>
               </div>
               <p className="text-sm text-gray-500">Next.js Frontend Developer (Last 2 Months)</p>
               <p className="text-gray-600 dark:text-gray-300 mt-1">

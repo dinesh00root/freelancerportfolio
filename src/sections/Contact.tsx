@@ -25,7 +25,10 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-
+  const [isRevealed, setIsRevealed] = useState(false);
+  const handleClick = () => {
+    setIsRevealed(true);
+  };
   const contactMethods = [
     {
       id: 'email',
@@ -334,16 +337,16 @@ export default function Contact() {
               Urgent Project? Call Directly
             </h3>
             <p className="text-blue-400 dark:text-blue-500 mb-4">
-              For time-sensitive projects or immediate assistance
+              For time-sensitive projects or immediate assistance (Tap on Blur)
             </p>
-            <a 
-              href="tel:+918374330906"
-              className="inline-flex items-center gap-2 bg-blue-500 dark:bg-blue-500 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105"
+            <button
+              className={`inline-flex items-center gap-2 bg-blue-500 dark:bg-blue-500 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${isRevealed ? 'blur-none' : 'blur-md'}`}
               aria-label="Call for urgent projects"
+              onClick={handleClick}
             >
               <Phone className="w-4 h-4" />
-              +91 8374330906
-            </a>
+              <span className={isRevealed ? '' : 'blur-md'}>+91 8374330906</span>
+            </button>
           </div>
         </motion.div>
 
