@@ -35,7 +35,7 @@ const projects = [
     },
     testimonial: '"Features are good need to improve UI"',
     client: 'Loyalty App Client',
-    demoUrl: 'https://drive.google.com/file/d/14AiDsGd-_MazwMG6KoZR8N5nA8Utw4NV/view?usp=sharing',
+    demoUrl: 'https://drive.google.com/file/d/1Y_BPG9JRrk4Gox3GeaMnLiLgQPznOn0L/view?usp=sharing',
     caseStudyUrl: '#'
   },
  
