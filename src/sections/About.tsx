@@ -12,7 +12,7 @@ export default function About() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-            👋 About <span className="text-blue-600 dark:text-blue-400">Dinesh</span>
+             About <span className="text-black dark:text-white">Me</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
             I am a passionate Full Stack Developer specializing in <strong>React Native App Design</strong>,{' '}
@@ -60,11 +60,11 @@ export default function About() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex-1 space-y-6 border-l-4 border-blue-600 dark:border-blue-400 pl-6"
+            className="flex-1 space-y-6 border-l-4 border-black dark:border-white pl-6"
           >
             <li>
               <div className="flex items-center gap-2">
-                <CalendarDays className="text-blue-600 dark:text-blue-400 w-5 h-5" />
+                <CalendarDays className="text-black dark:text-white w-5 h-5" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">MOVE37 Productions</h4>
               </div>
               <p className="text-sm text-gray-500">Next.js Frontend Developer (Last 2 Months)</p>
@@ -75,7 +75,7 @@ export default function About() {
 
             <li>
               <div className="flex items-center gap-2">
-                <Flame className="text-green-600 dark:text-green-400 w-5 h-5" />
+                <Flame className="text-black dark:text-white w-5 h-5" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">Client Project - Retail E-commerce App</h4>
               </div>
               <p className="text-sm text-gray-500">Delivered React Native App (2024)</p>
@@ -86,7 +86,7 @@ export default function About() {
 
             <li>
               <div className="flex items-center gap-2">
-                <CheckCircle className="text-purple-600 dark:text-purple-400 w-5 h-5" />
+                <CheckCircle className="text-black dark:text-white w-5 h-5" />
                 <h4 className="font-semibold text-gray-900 dark:text-white">Internship - Bits and Volts</h4>
               </div>
               <p className="text-sm text-gray-500">Mobile & Web App Development</p>
@@ -102,9 +102,9 @@ export default function About() {
           <a
             href="https://wa.me/+918374330906?text=Can%20we%20meet%20in%20Google%20Meet%20https%3A%2F%2Fmeet.google.com%2Fzsz-aatg-wqo"
             target='_blank'
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
           >
-            🤝 Lets Collaborate <MoveRight className="w-4 h-4" />
+            Lets Collaborate <MoveRight className="w-4 h-4" />
           </a>
         </div>
       </div>

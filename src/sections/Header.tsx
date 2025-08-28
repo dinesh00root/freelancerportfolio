@@ -44,17 +44,17 @@ const Header: React.FC = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:space-x-6">
-          <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="text-gray-700 dark:text-gray-200 hover:text-blue-600 cursor-pointer">Home</a>
-          <a href="#projects" onClick={(e) => handleScroll(e, 'projects')} className="text-gray-700 dark:text-gray-200 hover:text-blue-600 cursor-pointer">Projects</a>
-          <Link href="#about" onClick={(e) => handleScroll(e, 'about')} className="text-gray-700 dark:text-gray-200 hover:text-blue-600">About</Link>
-          <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-gray-700 dark:text-gray-200 hover:text-blue-600">Contact</Link>
+        <div className="hidden md:flex md:items-end md:space-x-6">
+          <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="text-gray-700 dark:text-gray-200 cursor-pointer">Home</a>
+          <a href="#projects" onClick={(e) => handleScroll(e, 'projects')} className="text-gray-700 dark:text-gray-200 cursor-pointer">Projects</a>
+          <Link href="#about" onClick={(e) => handleScroll(e, 'about')} className="text-gray-700 dark:text-gray-200 ">About</Link>
+          <Link href="#contact" onClick={(e) => handleScroll(e, 'contact')} className="text-gray-700 dark:text-gray-200">Contact</Link>
         </div>
 
         <div className="md:flex items-center space-x-3">
         <button
             onClick={toggleDarkMode}
-            className="ml-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            className="ml-2 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition cursor-pointer"
             aria-label="Toggle Dark Mode"
           >
             {darkMode ? <Sun className="w-5 h-5 text-yellow-400" /> : <Moon className="w-5 h-5 text-gray-800 dark:text-white" />}
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
           <Link
             href="https://wa.me/918374330906?text=Can%20we%20meet%20in%20Google%20Meet%20https%3A%2F%2Fmeet.google.com%2Fzsz-aatg-wqo"
             target='_blank'
-            className="hidden md:flex px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg animate-pulse hover:animate-none"
+            className="hidden md:flex px-4 py-2 bg-black text-white rounded-lg"
           >
             Hire Me
           </Link>

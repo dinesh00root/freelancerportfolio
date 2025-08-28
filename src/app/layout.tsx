@@ -2,15 +2,7 @@ import type { Metadata } from "next";
 import {  Poppins } from "next/font/google";
 import "./globals.css";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
 
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 const font = Poppins({
   weight: ['100','200','300','400','500','600','700','800','900'],
@@ -35,7 +27,7 @@ export const metadata: Metadata = {
     "app designer",
     "digital solutions"
   ],
-  authors: [{ name: "Dinesh", url: "https://yourportfolio.com" }],
+  authors: [{ name: "Dinesh", url: "https://dineshportfolio-alpha.vercel.app/" }],
   creator: "Dinesh",
   publisher: "Dinesh Freelancer",
   
@@ -43,13 +35,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourportfolio.com",
+    url: "https://dineshportfolio-alpha.vercel.app/",
     title: "Dinesh - Professional Web Designer & React Native App Developer",
     description: "Expert freelance web designer and React Native app developer. Get premium websites and mobile apps that drive results.",
     siteName: "Dinesh Freelancer Portfolio",
     images: [
       {
-        url: "https://yourportfolio.com/og-image.jpg",
+        url: "https://dineshportfolio-alpha.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Dinesh Freelancer - Web Design & App Development Services",
@@ -62,8 +54,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dinesh - Professional Web Designer & React Native App Developer",
     description: "Expert freelance web designer and React Native app developer. Get premium websites and mobile apps that drive results.",
-    creator: "@your_twitter_handle",
-    images: ["https://yourportfolio.com/twitter-image.jpg"],
+    creator: "@dinesh_portfolio",
+    images: ["https://dineshportfolio-alpha.vercel.app/twitter-image.jpg"],
   },
   
   // Additional SEO
