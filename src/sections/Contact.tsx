@@ -41,42 +41,42 @@ export default function Contact() {
       name: "React Native",
       icon: Smartphone,
       level: "Expert",
-      color: "from-blue-500 to-cyan-500",
+     
       description: "Mobile app development",
     },
     {
       name: "Next.js",
       icon: Globe,
       level: "Advanced",
-      color: "from-black to-gray-800",
+   
       description: "Full-stack web development",
     },
     {
       name: "React",
       icon: Code,
       level: "Expert",
-      color: "from-cyan-500 to-blue-500",
+ 
       description: "Frontend development",
     },
     {
       name: "Node.js",
       icon: Database,
       level: "Advanced",
-      color: "from-green-500 to-emerald-500",
+  
       description: "Backend development",
     },
     {
       name: "TypeScript",
       icon: Code,
       level: "Advanced",
-      color: "from-blue-600 to-indigo-600",
+
       description: "Type-safe development",
     },
     {
       name: "Tailwind CSS",
       icon: Zap,
       level: "Expert",
-      color: "from-cyan-400 to-blue-500",
+
       description: "Modern styling",
     },
   ];
@@ -247,9 +247,9 @@ export default function Contact() {
                   viewport={{ once: true }}
                 >
                   <div
-                    className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 mx-auto mb-4 bg-black dark:bg-white dark:text-black text-white rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <skill.icon className="w-8 h-8 text-white" />
+                    <skill.icon className="w-8 h-8 text-white dark:text-black" />
                   </div>
                   <h4 className="font-semibold text-black dark:text-white text-sm mb-1">
                     {skill.name}
