@@ -8,33 +8,21 @@ import {
   Twitter,
   MessageCircle,
   Download,
-  Clock,
-  MapPin,
-  Phone,
-  Calendar,
-  Star,
   ExternalLink,
   Copy,
   CheckCircle,
   Zap,
-  Heart,
-  Coffee,
   Code,
   Smartphone,
   Globe,
   Database,
-  Zap as Lightning,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
-import { loadFull } from "tsparticles";
+
 
 export default function Contact() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [isRevealed, setIsRevealed] = useState(false);
-  const handleClick = () => {
-    setIsRevealed(true);
-  };
 
   const skills = [
     {
