@@ -7,7 +7,7 @@ import Projects from "@/sections/Projects";
 
 export default function Home() {
   return (
-    <div className="container mx-auto">
+    <div>
       <Header />
       <div id="home">
       <Herosection />
