@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigationItems, socialLinks } from "@/constants/navigation";
-import { fadeInDown, hoverScale, tapScale } from "@/constants/animations";
+import { hoverScale, tapScale } from "@/constants/animations";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -42,7 +42,17 @@ const Header: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Get the actual header height dynamically
+      const header = document.querySelector("header");
+      const headerHeight = header ? header.offsetHeight : 80;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
       setMenuOpen(false);
     }
   };
