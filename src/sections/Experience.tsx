@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { experiences, experienceStats } from "@/constants/experience";
-import {
-  containerVariants,
-  itemVariants,
-  fadeInDown,
-} from "@/constants/animations";
+import { containerVariants, itemVariants } from "@/constants/animations";
 
 export default function Experience() {
   return (

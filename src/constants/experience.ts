@@ -1,11 +1,4 @@
-import {
-  Briefcase,
-  Code,
-  Smartphone,
-  Database,
-  Cloud,
-  Users,
-} from "lucide-react";
+import { Briefcase, Code, Smartphone, Database, Cloud } from "lucide-react";
 
 export interface Experience {
   title: string;
@@ -91,5 +84,5 @@ export const experienceStats = [
   { icon: Code, label: "MERN Stack", value: "Advanced" },
   { icon: Database, label: "Backend", value: "Intermediate" },
   { icon: Cloud, label: "Cloud & DevOps", value: "Intermediate" },
-  {icon: Smartphone, label: "Mobile", value: "Intermediate" },
+  { icon: Smartphone, label: "Mobile", value: "Intermediate" },
 ] as const;

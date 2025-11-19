@@ -5,7 +5,7 @@ import { GraduationCap, Award, MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { education, certifications } from "@/constants/about";
 import { socialLinks } from "@/constants/navigation";
-import { fadeInDown, hoverScale, tapScale } from "@/constants/animations";
+import { hoverScale, tapScale } from "@/constants/animations";
 
 export default function About() {
   return (
@@ -121,7 +121,7 @@ export default function About() {
             whileHover={hoverScale}
             whileTap={tapScale}
           >
-            Let's Collaborate
+            Let&apos;s Collaborate
             <MoveRight className="w-5 h-5" />
           </motion.a>
         </motion.div>

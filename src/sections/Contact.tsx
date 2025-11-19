@@ -1,30 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { skills, contactMethods } from "@/constants/contact";
-import { socialLinks } from "@/constants/navigation";
-import {
-  containerVariants,
-  itemVariants,
-  hoverScale,
-  tapScale,
-} from "@/constants/animations";
+import { hoverScale, tapScale } from "@/constants/animations";
 
 export default function Contact() {
-  const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(socialLinks.email);
-      setCopiedEmail(true);
-      setTimeout(() => setCopiedEmail(false), 2000);
-    } catch (err) {
-      console.error("Failed to copy email:", err);
-    }
-  };
-
   const getCurrentYear = () => new Date().getFullYear();
 
   return (
@@ -46,7 +28,7 @@ export default function Contact() {
               id="contact-heading"
               className="text-4xl font-bold mb-6 text-blue-600 dark:text-blue-400"
             >
-              Let's Create Something Amazing
+              Let&apos;s Create Something Amazing
             </h2>
 
             <p className="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed mb-8">
