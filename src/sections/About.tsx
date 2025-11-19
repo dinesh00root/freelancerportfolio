@@ -1,112 +1,130 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { CalendarDays, CheckCircle, Flame, MoveRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { GraduationCap, Award, MoveRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { education, certifications } from "@/constants/about";
+import { socialLinks } from "@/constants/navigation";
+import { fadeInDown, hoverScale, tapScale } from "@/constants/animations";
 
 export default function About() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-white via-slate-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
+    <section
+      id="about"
+      className="py-20 px-4 sm:px-6 bg-gradient-to-br from-slate-50 via-teal-50 to-blue-50 dark:from-slate-900 dark:via-teal-950 dark:to-blue-950 relative overflow-hidden"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-             About <span className="text-black dark:text-white">Me</span>
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-4xl  font-black mb-4">
+            About <span className="text-blue-600 dark:text-blue-400">Me</span>
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto text-lg">
-            I am a passionate Full Stack Developer specializing in <strong>React Native App Design</strong>,{' '}
-            <strong>Next.js Frontend Development</strong>, and modern web solutions that drive
-            business success.
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            A passionate Full Stack Developer with expertise in MERN stack,
+            cloud infrastructure, and mobile app development
           </p>
-        </div>
+        </motion.div>
 
-        {/* Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-10 items-center">
-          {/* Left Side: Summary */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex-1 space-y-6 text-gray-700 dark:text-gray-300"
-          >
-            <p className="text-lg">
-              With <strong>6 months of hands-on mobile app development</strong> and strong experience in full-stack web technologies,
-              I have successfully delivered a <strong>client-centric E-commerce app</strong> using React Native CLI, achieving 100% satisfaction
-              based on custom UI/UX and seamless functionality.
-            </p>
-            <p className="text-lg">
-              Currently, I work as a <strong>Next.js Frontend Developer</strong> at <strong>MOVE37 Productions</strong>, where I craft scalable and high-performing UI systems
-              using the latest in <strong>TypeScript</strong>, <strong>Tailwind CSS</strong>, and component libraries like <strong>shadcn/ui</strong>.
-            </p>
-            <p className="text-lg">
-              Previously, I gained valuable experience in app development during my internship at <strong>Bits and Volts</strong>, where I
-              contributed to live projects and improved my real-world coding and deployment skills.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Badge variant="default">React Native</Badge>
-              <Badge variant="default">Next.js</Badge>
-              <Badge variant="default">TypeScript</Badge>
-              <Badge variant="default">MongoDB</Badge>
-              <Badge variant="default">Spring Boot</Badge>
-              <Badge variant="outline">Mobile App Design</Badge>
-              <Badge variant="outline">UI Optimization</Badge>
-              <Badge variant="outline">Full Stack</Badge>
+        {/* Education Section */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-blue-200/50 dark:border-blue-800/50 shadow-lg">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-blue-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <GraduationCap className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+                  Education
+                </h3>
+                <h4 className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                  {education.degree} - {education.field}
+                </h4>
+                <p className="text-lg text-slate-700 dark:text-slate-300 mb-2">
+                  {education.university}
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600 dark:text-slate-400">
+                  <span>{education.period}</span>
+                </div>
+              </div>
             </div>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          {/* Right Side: Timeline / Experience */}
-          <motion.ul
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex-1 space-y-6 border-l-4 border-black dark:border-white pl-6"
-          >
-            <li>
-              <div className="flex items-center gap-2">
-                <CalendarDays className="text-black dark:text-white w-5 h-5" />
-                <h4 className="font-semibold text-gray-900 dark:text-white">MOVE37 Productions</h4>
-              </div>
-              <p className="text-sm text-gray-500">Next.js Frontend Developer (Last 2 Months)</p>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Building fast, accessible, SEO-optimized web experiences with modern design systems.
-              </p>
-            </li>
-
-            <li>
-              <div className="flex items-center gap-2">
-                <Flame className="text-black dark:text-white w-5 h-5" />
-                <h4 className="font-semibold text-gray-900 dark:text-white">Client Project - Retail E-commerce App</h4>
-              </div>
-              <p className="text-sm text-gray-500">Delivered React Native App (2024)</p>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Designed and developed an intuitive mobile shopping experience using custom UI & Firebase.
-              </p>
-            </li>
-
-            <li>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-black dark:text-white w-5 h-5" />
-                <h4 className="font-semibold text-gray-900 dark:text-white">Internship - Bits and Volts</h4>
-              </div>
-              <p className="text-sm text-gray-500">Mobile & Web App Development</p>
-              <p className="text-gray-600 dark:text-gray-300 mt-1">
-                Contributed to real-time React Native applications and REST APIs during my internship phase.
-              </p>
-            </li>
-          </motion.ul>
-        </div>
+        {/* Certifications */}
+        <motion.div
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-100 mb-6 flex items-center gap-3">
+            <Award className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            Certifications
+          </h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={index}
+                className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-xl p-6 border border-blue-200/50 dark:border-blue-800/50 hover:border-blue-400 dark:hover:border-blue-600 transition-all shadow-lg"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                    <cert.icon className="w-5 h-5 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-1">
+                      {cert.name}
+                    </h4>
+                    <p className="text-sm text-blue-600 dark:text-blue-400 mb-2">
+                      {cert.issuer}
+                    </p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400">
+                      {cert.date}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <a
-            href="https://wa.me/+918374330906?text=Can%20we%20meet%20in%20Google%20Meet%20https%3A%2F%2Fmeet.google.com%2Fzsz-aatg-wqo"
-            target='_blank'
-            className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition"
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <motion.a
+            href={socialLinks.whatsapp}
+            target="_blank"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg"
+            whileHover={hoverScale}
+            whileTap={tapScale}
           >
-            Lets Collaborate <MoveRight className="w-4 h-4" />
-          </a>
-        </div>
+            Let's Collaborate
+            <MoveRight className="w-5 h-5" />
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   );

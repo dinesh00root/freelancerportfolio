@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "Dinesh - Professional Web Designer & React Native App Developer",
     template: "%s | Dinesh Freelancer"
   },
-  description: "Expert freelance web designer and React Native app developer. Specializing in modern web design, mobile app development, and digital solutions. Get premium websites and mobile apps that drive results.",
+  description: "Experienced freelance web designer and React Native app developer. Specializing in modern web design, mobile app development, and digital solutions. Get premium websites and mobile apps that drive results.",
   keywords: [
     "freelance web designer",
     "react native developer",
@@ -25,7 +25,15 @@ export const metadata: Metadata = {
     "next.js developer",
     "freelancer",
     "app designer",
-    "digital solutions"
+    "digital solutions",
+    "Software Engineer",
+    "MERN Stack Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "TypeScript Developer",
+    "Cloud Developer",
+    "DevOps Engineer",
+    "Full Stack Developer",
   ],
   authors: [{ name: "Dinesh", url: "https://dineshportfolio-alpha.vercel.app/" }],
   creator: "Dinesh",

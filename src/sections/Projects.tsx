@@ -4,305 +4,226 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
-  Truck,
-  Leaf,
-  ShoppingCart,
   ExternalLink,
   Calendar,
   Users,
   Zap,
   Award,
   MessageCircle,
-  Coins,
+  Github,
 } from "lucide-react";
-
-const projects = [
-  {
-    title: "Merchant Loyalty App",
-    icon: <Coins className="h-6 w-6 text-black dark:text-white" />,
-    tech: [
-      "React Native",
-      "Express.js",
-      "Postgresql",
-      "firebase",
-      "Typescript",
-      "Tailwind CSS",
-      "Node.js",
-    ],
-    desc: "A loyalty app for merchants to manage customer rewards and transactions. Features include real-time transaction tracking, customer management, and analytics dashboard.",
-    type: "Full Stack Project",
-    deliveryTime: "3 weeks",
-    metrics: {
-      performance: "60% faster processing",
-    },
-    testimonial: '"Features are good need to improve UI"',
-    client: "Loyalty App Client",
-    demoUrl:
-      "https://drive.google.com/file/d/14AiDsGd-_MazwMG6KoZR8N5nA8Utw4NV/view?usp=sharing",
-    caseStudyUrl: "#",
-  },
-  {
-    title: "Customer Loyalty App",
-    icon: <Coins className="h-6 w-6 text-black dark:text-white" />,
-    tech: [
-      "React Native",
-      "Express.js",
-      "Postgresql",
-      "firebase",
-      "Typescript",
-      "Tailwind CSS",
-      "Node.js",
-    ],
-    desc: "A loyalty app for merchants to manage customer rewards and transactions. Features include real-time transaction tracking, customer management, and analytics dashboard.",
-    type: "Full Stack Project",
-    deliveryTime: "3 weeks",
-    metrics: {
-      performance: "60% faster processing",
-    },
-    testimonial: '"Features are good need to improve UI"',
-    client: "Loyalty App Client",
-    demoUrl:
-      "https://drive.google.com/file/d/1Y_BPG9JRrk4Gox3GeaMnLiLgQPznOn0L/view?usp=sharing",
-    caseStudyUrl: "#",
-  },
-
-  {
-    title: "Truck Management System",
-    icon: <Truck className="h-6 w-6 text-black dark:text-white" />,
-    tech: ["React", "Typescript", "Tailwind CSS", "Node.js"],
-    desc: "Streamlined logistics operations for a delivery company serving 5+ daily customers. Reduced manual processing by 60% and improved delivery tracking accuracy. ",
-    type: "Frontend Project",
-    deliveryTime: "3 weeks",
-    metrics: {
-      performance: "40% faster processing",
-      transactions: "1000+ daily",
-      uptime: "99.9%",
-    },
-    testimonial:
-      '"Delivered ahead of schedule with excellent API performance."',
-    client: "Logistics Company",
-    demoUrl: "https://fleetmanagementsyetem.vercel.app/",
-
-    caseStudyUrl: "#",
-  },
-  {
-    title: "E-Commerce App for Retail Store",
-    icon: <ShoppingCart className="h-6 w-6 text-black dark:text-white" />,
-    tech: ["React Js", "Redux", "Firebase", "Tailwind CSS"],
-    desc: "Full-featured retail shopping app with sleek UI, seamless cart/checkout flow, and secure payment integration. Increased client sales by 35%.",
-    type: "Client Project",
-    deliveryTime: "7 weeks",
-
-    testimonial: '"Professional delivery and excellent post-launch support."',
-    client: "Retail Business",
-    demoUrl: "https://e-commerce-website-xi-blue.vercel.app/",
-    githubUrl: "https://github.com/Dinesh-78/E-commerce-website",
-    caseStudyUrl: "#",
-  },
-  {
-    title: "Agro Mart (React Native App)",
-    icon: <Leaf className="h-6 w-6 text-black dark:text-white" />,
-    tech: ["React Native", "Express.js", "MongoDB", "Real-time"],
-    desc: "Connected 200+ farmers with consumers through mobile platform. Features include product listing, order management, and community support with real-time tracking.",
-    type: "Mobile App",
-    deliveryTime: "4 weeks",
-    metrics: {
-      users: "200+ farmers",
-      orders: "500+ processed",
-      rating: "4.8/5 stars",
-    },
-    testimonial:
-      '"Intuitive design and smooth user experience. Highly recommended!"',
-    client: "Agricultural Startup",
-    demoUrl:
-      "https://drive.google.com/file/d/1Gm_VRXkGUfuNejHvpDlqCcUn3fAZdxHA/view?usp=sharing",
-    githubUrl: "https://github.com/Dinesh-78/Agromart-react-native",
-    caseStudyUrl: "#",
-  },
-  {
-    title: "Driver React Native App",
-    icon: <Users className="h-6 w-6 text-black dark:text-white" />,
-    tech: ["React Native", "Express.js", "MongoDB", "Real-time"],
-    desc: "Connected 200+ farmers with consumers through mobile platform. Features include product listing, order management, and community support with real-time tracking.",
-    type: "Mobile App",
-    deliveryTime: "4 weeks",
-    metrics: {
-      users: "200+ farmers",
-      orders: "500+ processed",
-      rating: "4.8/5 stars",
-    },
-    testimonial:
-      '"Intuitive design and smooth user experience. Highly recommended!"',
-    client: "Agricultural Startup",
-    demoUrl:
-      "https://drive.google.com/file/d/15DRWES9buH5xNST5cAvejllGU4TEUE8Z/view?usp=sharing",
-  },
-];
+import { motion } from "framer-motion";
+import { projects } from "@/constants/projects";
+import { socialLinks } from "@/constants/navigation";
+import {
+  containerVariants,
+  itemVariants,
+  hoverScale,
+  tapScale,
+} from "@/constants/animations";
 
 export default function Projects() {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-white via-gray-50 to-white dark:from-black dark:via-gray-900 dark:to-black transition-all duration-500">
+    <section
+      id="projects"
+      className="py-20 px-4 sm:px-6 bg-gradient-to-br from-slate-50 via-purple-50 to-teal-50 dark:from-slate-900 dark:via-purple-950 dark:to-teal-950 relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-black dark:bg-white dark:text-black text-white px-4 py-2 rounded-full mb-6">
-            <Award className="h-4 w-4 text-white dark:text-black" />
-            <span className="text-sm font-medium text-white dark:text-black">
-              3 Successful Projects Completed
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.div
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full mb-6 shadow-lg"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Award className="h-4 w-4 text-white" />
+            <span className="text-sm font-medium text-white">
+              {projects.length} Successful Projects Completed
             </span>
-          </div>
+          </motion.div>
 
-          <h2 className="text-5xl font-bold mb-6 text-black dark:text-white">
-            Featured{" "}
-            <span className="text-black dark:text-white">Projects</span>
+          <h2 className="text-4xl  font-black mb-6">
+            <span className="text-blue-600 dark:text-blue-400">Featured</span>{" "}
+            <span className="text-slate-900 dark:text-slate-100">Projects</span>
           </h2>
 
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-8">
             Full-stack web applications and mobile solutions built with modern
             technologies. Each project delivered on time with 100% client
             satisfaction.
           </p>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <div className="flex items-center gap-2 text-black dark:text-white">
-              <Zap className="h-5 w-5" />
-              <span className="font-semibold">100% On-Time Delivery</span>
-            </div>
-            <div className="flex items-center gap-2 text-black dark:text-white">
-              <Users className="h-5 w-5" />
-              <span className="font-semibold">100% Quality Assurance</span>
-            </div>
-            <div className="flex items-center gap-2 text-black dark:text-white">
-              <Award className="h-5 w-5" />
-              <span className="font-semibold">100% Client Satisfaction</span>
-            </div>
-          </div>
-        </div>
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {[
+              { icon: Zap, text: "100% On-Time Delivery" },
+              { icon: Users, text: "100% Quality Assurance" },
+              { icon: Award, text: "100% Client Satisfaction" },
+            ].map((indicator, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center gap-2 text-blue-600 dark:text-blue-400"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 + index * 0.1 }}
+              >
+                <indicator.icon className="h-5 w-5" />
+                <span className="font-semibold text-sm sm:text-base">
+                  {indicator.text}
+                </span>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
+        <motion.div
+          className="grid gap-6 sm:gap-8 lg:grid-cols-3 md:grid-cols-2"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {projects.map((project, i) => (
-            <Card
-              key={i}
-              className="group hover:shadow-2xl hover:-translate-y-2 transform transition-all duration-500 border-0 shadow-lg bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-gray-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <motion.div key={i} variants={itemVariants}>
+              <Card className="group h-full hover:shadow-2xl transform transition-all duration-500 border border-blue-200/50 dark:border-blue-800/50 shadow-lg bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <CardHeader className="pb-4 relative z-10">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700">
-                      {project.icon}
-                    </div>
-                    <Badge
-                      variant="secondary"
-                      className="bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 border-gray-200 dark:border-gray-700"
-                    >
-                      {project.type}
-                    </Badge>
-                  </div>
-                </div>
-
-                <CardTitle className="text-xl font-bold text-black dark:text-white group-hover:text-black dark:group-hover:text-white transition-colors">
-                  {project.title}
-                </CardTitle>
-
-                <div className="flex items-center gap-2 text-sm text-gray-500">
-                  <Calendar className="h-4 w-4" />
-                  <span>Delivered in {project.deliveryTime}</span>
-                </div>
-              </CardHeader>
-
-              <CardContent className="space-y-6 relative z-10">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {project.desc}
-                </p>
-
-                {/* Tech Stack */}
-                <div>
-                  <h4 className="font-semibold text-black dark:text-white mb-3">
-                    Technologies Used:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tag, idx) => (
-                      <Badge
-                        key={idx}
-                        variant="outline"
-                        className="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                <CardHeader className="pb-4 relative z-10">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-3">
+                      <motion.div
+                        className="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/50"
+                        whileHover={{ rotate: 5, scale: 1.1 }}
                       >
-                        {tag}
+                        <project.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                      </motion.div>
+                      <Badge
+                        variant="secondary"
+                        className="bg-blue-50 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800"
+                      >
+                        {project.type}
                       </Badge>
-                    ))}
+                    </div>
                   </div>
-                </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-2 pt-4 border-t border-gray-100 dark:border-gray-700">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    className="flex-1 flex items-center justify-center gap-2 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-100 dark:text-black text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    className="flex-1 flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 px-4 py-2 rounded-lg font-medium transition-colors text-sm"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+                  <CardTitle className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </CardTitle>
+
+                  <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                    <Calendar className="h-4 w-4" />
+                    <span>Delivered in {project.deliveryTime}</span>
+                  </div>
+                </CardHeader>
+
+                <CardContent className="space-y-6 relative z-10">
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    {project.desc}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div>
+                    <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 text-sm">
+                      Technologies Used:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tag, idx) => (
+                        <Badge
+                          key={idx}
+                          variant="outline"
+                          className="bg-blue-50/50 dark:bg-blue-950/50 border-blue-300 dark:border-blue-700 text-blue-700 dark:text-blue-300 text-xs hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-2 pt-4 border-t border-blue-200/50 dark:border-blue-800/50">
+                    <motion.a
+                      href={project.demoUrl}
+                      target="_blank"
+                      className="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-lg font-medium transition-colors text-sm shadow-lg"
+                      whileHover={hoverScale}
+                      whileTap={tapScale}
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Live Demo
+                    </motion.a>
+                    {project.githubUrl && (
+                      <motion.a
+                        href={project.githubUrl}
+                        target="_blank"
+                        className="flex-1 flex items-center justify-center gap-2 border border-blue-300 dark:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-950/50 px-4 py-2.5 rounded-lg font-medium transition-colors text-sm text-blue-700 dark:text-blue-300"
+                        whileHover={hoverScale}
+                        whileTap={tapScale}
+                      >
+                        <Github className="h-4 w-4" />
+                        GitHub
+                      </motion.a>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Enhanced CTA Section */}
-        <div className="mt-20 text-center">
-          <div className="">
-            <div className="" />
-            <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-4">
-                Ready to Start Your Project?
-              </h3>
-              <p className="text-xl opacity-90 mb-6 max-w-2xl mx-auto">
-                Join satisfied clients who have transformed their ideas into
-                successful digital products.
-              </p>
+        <motion.div
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="relative z-10">
+            <h3 className="text-3xl sm:text-4xl font-black mb-4 text-blue-600 dark:text-blue-400">
+              Ready to Start Your Project?
+            </h3>
+            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
+              Join satisfied clients who have transformed their ideas into
+              successful digital products.
+            </p>
 
-       
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="https://wa.me/918374330906?text=Can%20we%20meet"
-                  target="_blank"
-                  className="inline-flex items-center gap-2 bg-white dark:bg-black text-black dark:text-white px-8 py-4 rounded-full font-bold hover:bg-gray-100 dark:hover:bg-gray-900 transition-all transform hover:scale-105 shadow-lg"
-                >
-                  <MessageCircle className="h-5 w-5" />
-                  WhatsApp Me Now
-                </a>
-               
-              </div>
-
-             
-            </div>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <motion.a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-lg"
+                whileHover={hoverScale}
+                whileTap={tapScale}
+              >
+                <MessageCircle className="h-5 w-5" />
+                WhatsApp Me Now
+              </motion.a>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Availability Banner */}
-        <div className="mt-12 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 text-center">
-          <div className="flex items-center justify-center gap-2 text-gray-700 dark:text-gray-300">
-            <div className="w-3 h-3 bg-black dark:bg-white rounded-full animate-pulse "></div>
-            <span className="font-semibold">
-              Currently Available for New Projects
-            </span>
-          </div>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">
-            Accepting new clients this month • Response within 2 hours
-          </p>
-        </div>
       </div>
     </section>
   );

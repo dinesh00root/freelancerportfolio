@@ -3,23 +3,26 @@ import Contact from "@/sections/Contact";
 import Header from "@/sections/Header";
 import Herosection from "@/sections/Herosection";
 import Projects from "@/sections/Projects";
-
+import Experience from "@/sections/Experience";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
       <div id="home">
-      <Herosection />
+        <Herosection />
+      </div>
+      <div id="experience">
+        <Experience />
       </div>
       <div id="projects">
-      <Projects />
+        <Projects />
       </div>
       <div id="about">
-      <About />
+        <About />
       </div>
       <div id="contact">
-      <Contact />
+        <Contact />
       </div>
     </div>
   );
